@@ -1,0 +1,19 @@
+<ul>
+<% for(var i=0; i < controls.length; i++) {%>
+<div class="control-wrapper">
+	<% if (controls[i].modelTypeStr==='Label') { %>
+	<label <% controls[i].properties.Visible_exp ? "": "" %> ><% {{getProperty(controls[i], 'text') }} %>></label>
+
+	<% } %>
+	<% if (controls[i].modelTypeStr==='Edit') { %>
+	<div >I am an Edit</div>
+	<% } %>
+	<% if (controls[i].modelTypeStr==='PushButton') { %>
+	<div >I am an PushButton</div>
+	<% } %>
+	
+</div>
+	
+	
+	<% } %>
+</ul>
